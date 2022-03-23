@@ -1,0 +1,15 @@
+IC_CFG_PATH : executed by Bourne-compatible login shells.
+
+if [ "$BASH" ]; then
+  if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+  fi
+fi
+
+mesg n || true
+export  PATH=$PATH:/usr/local/go/go/bin
+export  GOROOT=/usr/local/go/go
+export  GOPATH=$HOME/go
+export  PATH=$PATH:$HOME/go/bin
+export GOPROXY=https://goproxy.io
+export FABRIC_CFG_PATH=$GOPATH/src/github.com/hyperledger/fabric/imocc/deploy	
